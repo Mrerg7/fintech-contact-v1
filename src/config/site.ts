@@ -11,19 +11,8 @@ export const SITE = {
   publishedDate: '2026-08-01',
 } as const;
 
-/** Cloudflare Images CDN — update heroImageId after uploading a hero asset. */
-export const CF_IMAGES = {
-  accountHash: '-sPAUAWeA405NiWJ0SNIQA',
-  /** Abstract financial markets / digital finance atmosphere */
-  heroImageId: '2f99ac34-1204-4dfa-68be-825064298500',
-} as const;
-
-export function cfImageUrl(imageId: string, variant = 'public'): string {
-  return `https://imagedelivery.net/${CF_IMAGES.accountHash}/${imageId}/${variant}`;
-}
-
-export const HERO_IMAGE = cfImageUrl(CF_IMAGES.heroImageId);
-export const OG_IMAGE = HERO_IMAGE;
+/** Branded OG image served from this site (no third-party project assets). */
+export const OG_IMAGE = `${SITE.url}/og.svg`;
 
 export const ACQUISITION_MAILTO = `mailto:${SITE.email}?subject=${encodeURIComponent(
   'fintech.contact Domain Acquisition Inquiry',

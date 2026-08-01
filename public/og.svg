@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07131F"/>
+      <stop offset="0.5" stop-color="#0C1B2A"/>
+      <stop offset="1" stop-color="#0A2A24"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(280 180) rotate(90) scale(320 420)">
+      <stop stop-color="#14A884" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#14A884" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <text x="80" y="250" fill="#14A884" font-family="Sora, Arial, sans-serif" font-size="22" font-weight="600" letter-spacing="4">PREMIUM DOMAIN</text>
+  <text x="80" y="340" fill="#FFFFFF" font-family="Sora, Arial, sans-serif" font-size="72" font-weight="600" letter-spacing="-1.5">fintech.contact</text>
+  <text x="80" y="410" fill="#C8D5DF" font-family="Georgia, serif" font-size="28">The definitive domain for Financial Technologies</text>
+</svg>

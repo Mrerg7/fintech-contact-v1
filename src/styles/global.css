@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Bricolage Grotesque", "Segoe UI", sans-serif;
+  --font-display: "Sora", "Segoe UI", sans-serif;
   --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
   --font-sans: "DM Sans", "Segoe UI", sans-serif;
 
@@ -38,8 +38,8 @@
 @layer components {
   .font-display {
     font-family: var(--font-display);
-    font-weight: 700;
-    letter-spacing: -0.04em;
+    font-weight: 600;
+    letter-spacing: -0.02em;
   }
 
   .font-serif {
@@ -48,18 +48,61 @@
 
   .domain-mark {
     font-family: var(--font-display);
-    font-size: clamp(2.75rem, 9vw, 5.75rem);
-    line-height: 0.92;
-    letter-spacing: -0.06em;
-    font-weight: 700;
+    font-size: clamp(2.5rem, 8vw, 4.75rem);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    font-weight: 600;
   }
 
   .section-title {
     font-family: var(--font-display);
-    font-size: clamp(1.85rem, 4.5vw, 2.75rem);
-    line-height: 1.05;
-    letter-spacing: -0.035em;
-    font-weight: 700;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+
+  .hero-plane {
+    background:
+      radial-gradient(ellipse 90% 70% at 20% 15%, rgba(20, 168, 132, 0.28), transparent 55%),
+      radial-gradient(ellipse 70% 55% at 85% 25%, rgba(26, 80, 110, 0.35), transparent 50%),
+      linear-gradient(165deg, #07131f 0%, #0c1b2a 48%, #0a2a24 100%);
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.18;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black, transparent);
+  }
+
+  .hero-glow {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(64px);
+    pointer-events: none;
+  }
+
+  .hero-glow-a {
+    top: 12%;
+    left: 8%;
+    width: 18rem;
+    height: 18rem;
+    background: rgba(20, 168, 132, 0.22);
+    animation: drift-a 14s ease-in-out infinite alternate;
+  }
+
+  .hero-glow-b {
+    right: 5%;
+    bottom: 18%;
+    width: 22rem;
+    height: 22rem;
+    background: rgba(56, 120, 160, 0.18);
+    animation: drift-b 18s ease-in-out infinite alternate;
   }
 
   .btn-primary {
@@ -139,6 +182,24 @@
   }
 }
 
+@keyframes drift-a {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(24px, 18px);
+  }
+}
+
+@keyframes drift-b {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-20px, -14px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -147,7 +208,9 @@
   .reveal,
   .reveal-delay-1,
   .reveal-delay-2,
-  .reveal-delay-3 {
+  .reveal-delay-3,
+  .hero-glow-a,
+  .hero-glow-b {
     animation: none;
   }
 }
