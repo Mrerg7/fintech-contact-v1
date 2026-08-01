@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ACQUISITION_MAILTO, SITE } from '../config/site';
+---
+
+<BaseLayout
+  title={`Page not found | ${SITE.name}`}
+  description="The page you requested could not be found on fintech.contact."
+  noindex={true}
+>
+  <main class="flex min-h-dvh flex-col items-center justify-center px-5 py-20 text-center">
+    <p class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)]">404</p>
+    <h1 class="font-display text-4xl tracking-tight text-[var(--color-ink)] sm:text-5xl">
+      Page not found
+    </h1>
+    <p class="mt-4 max-w-md font-serif text-lg text-[var(--color-ink-soft)]/75">
+      Return home, or inquire about acquiring {SITE.name}.
+    </p>
+    <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+      <a href="/" class="btn-primary">Back to home</a>
+      <a
+        href={ACQUISITION_MAILTO}
+        class="inline-flex items-center justify-center rounded-full border border-[var(--color-line)] px-6 py-3 text-sm font-semibold text-[var(--color-ink)] transition-colors hover:bg-white/60"
+      >
+        {SITE.email}
+      </a>
+    </div>
+  </main>
+</BaseLayout>
