@@ -9,10 +9,11 @@ export const SITE = {
   email: 'sales@desertrich.com',
   locale: 'en_US',
   publishedDate: '2026-08-01',
+  googleSiteVerification: 'SvXvkz88HmD57NSp8Opd6rZU_tqnjuIWrWJEf16yw0E',
 } as const;
 
-/** Branded OG image served from this site (no third-party project assets). */
-export const OG_IMAGE = `${SITE.url}/og.svg`;
+export const HERO_IMAGE = '/hero.jpg';
+export const OG_IMAGE = `${SITE.url}/hero.jpg`;
 
 export const ACQUISITION_MAILTO = `mailto:${SITE.email}?subject=${encodeURIComponent(
   'fintech.contact Domain Acquisition Inquiry',
