@@ -63,8 +63,9 @@ const structuredData = {
       offers: {
         '@type': 'Offer',
         url: ACQUISITION_MAILTO,
-        availability: 'https://schema.org/InStock',
+        price: String(SITE.askingPrice),
         priceCurrency: 'USD',
+        availability: 'https://schema.org/InStock',
         businessFunction: 'https://schema.org/Sell',
         seller: {
           '@type': 'Organization',

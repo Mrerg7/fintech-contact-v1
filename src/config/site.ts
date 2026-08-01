@@ -7,6 +7,8 @@ export const SITE = {
   description:
     'fintech.contact is the definitive premium domain for financial technologies — a category-defining .contact asset for fintech platforms, payments, neobanks, and B2B financial software. Available for acquisition.',
   email: 'sales@desertrich.com',
+  askingPrice: 10000,
+  askingPriceLabel: '$10,000',
   locale: 'en_US',
   publishedDate: '2026-08-01',
   googleSiteVerification: 'SvXvkz88HmD57NSp8Opd6rZU_tqnjuIWrWJEf16yw0E',

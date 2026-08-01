@@ -33,21 +33,32 @@ const { disclaimer } = Astro.props;
           </h2>
           <p class="mt-4 max-w-xl font-serif text-base leading-relaxed text-white/65 sm:text-lg">
             Positioned at the intersection of financial technologies branding, trust, and direct-response
-            semantics, this domain is a scarce strategic asset. Serious buyers may inquire for pricing,
-            transfer logistics, and escrow options.
+            semantics, this domain is a scarce strategic asset. Asking price {SITE.askingPriceLabel} USD —
+            contact for transfer logistics and escrow options.
           </p>
         </div>
 
         <div class="rounded-2xl border border-white/10 bg-black/35 p-6 backdrop-blur-xl sm:p-8">
           <p class="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-white/45">
-            Acquisition contact
+            Asking price
           </p>
-          <a
-            href={`mailto:${SITE.email}`}
-            class="block break-all font-display text-2xl tracking-tight text-white transition-colors hover:text-[var(--color-accent-bright)] sm:text-3xl"
-          >
-            {SITE.email}
-          </a>
+          <p class="font-display text-4xl tracking-tight text-white sm:text-5xl">
+            {SITE.askingPriceLabel}
+            <span class="ml-1 text-lg font-sans font-medium tracking-normal text-white/45 sm:text-xl">USD</span>
+          </p>
+
+          <div class="mt-6 border-t border-white/10 pt-6">
+            <p class="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-white/45">
+              Acquisition contact
+            </p>
+            <a
+              href={`mailto:${SITE.email}`}
+              class="block break-all font-display text-xl tracking-tight text-white transition-colors hover:text-[var(--color-accent-bright)] sm:text-2xl"
+            >
+              {SITE.email}
+            </a>
+          </div>
+
           <a href={ACQUISITION_MAILTO} class="btn-primary mt-6 w-full">
             Inquire about acquisition
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4" aria-hidden="true">
