@@ -19,6 +19,7 @@ const {
 const pathname = Astro.url.pathname.endsWith('/')
   ? Astro.url.pathname
   : `${Astro.url.pathname}/`;
+// Always emit the apex HTTPS URL with trailing slash — never the request host.
 const canonicalURL = new URL(pathname, `${SITE.url}/`).href;
 
 const structuredData = {
@@ -27,7 +28,7 @@ const structuredData = {
     {
       '@type': 'WebSite',
       '@id': `${SITE.url}/#website`,
-      url: SITE.url,
+      url: canonicalURL,
       name: SITE.name,
       description,
       inLanguage: 'en-US',
@@ -35,7 +36,7 @@ const structuredData = {
     {
       '@type': 'WebPage',
       '@id': `${SITE.url}/#webpage`,
-      url: SITE.url,
+      url: canonicalURL,
       name: title,
       description,
       isPartOf: { '@id': `${SITE.url}/#website` },
@@ -53,7 +54,7 @@ const structuredData = {
       name: 'fintech.contact Premium Domain Name',
       description:
         'The definitive premium .contact domain for financial technologies. Category-defining brand asset available for acquisition.',
-      url: SITE.url,
+      url: canonicalURL,
       image: ogImage,
       category: 'Premium Domain Name',
       brand: {
@@ -111,7 +112,7 @@ const structuredData = {
       '@type': 'Organization',
       '@id': `${SITE.url}/#organization`,
       name: SITE.name,
-      url: SITE.url,
+      url: canonicalURL,
       email: SITE.email,
     },
   ],
@@ -122,8 +123,11 @@ const structuredData = {
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#0c1b2a" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
 
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -136,6 +140,8 @@ const structuredData = {
       content="fintech.contact, financial technologies domain, fintech domain for sale, premium .contact domain, fintech brand, payments domain, neobank domain"
     />
     <link rel="canonical" href={canonicalURL} />
+    <link rel="alternate" href={canonicalURL} hreflang="en" />
+    <link rel="alternate" href={canonicalURL} hreflang="x-default" />
 
     {SITE.googleSiteVerification && (
       <meta name="google-site-verification" content={SITE.googleSiteVerification} />

@@ -1,6 +1,6 @@
 # fintech.contact
 
-Static Astro site for **fintech.contact** — the definitive domain name for Financial Technologies. Deployed as a Cloudflare Workers Static Assets project (assets-only, no Worker script, no Astro adapter).
+Static Astro site for **fintech.contact** — the definitive domain name for Financial Technologies. Deployed as Cloudflare Workers Static Assets plus a small Worker that 301-redirects `www` / HTTP to the canonical apex HTTPS host.
 
 ## Stack
 
@@ -22,6 +22,6 @@ npm run deploy
 
 ## Deploy
 
-Assets-only Wrangler config in `wrangler.jsonc` points at `./dist`. Custom domains: `fintech.contact` and `www.fintech.contact`.
+Wrangler config in `wrangler.jsonc` serves `./dist` and runs `src/worker.ts` first to enforce `https://fintech.contact/` as the only indexable host. Custom domains: `fintech.contact` and `www.fintech.contact` (www redirects).
 
 Acquisition inquiries route to `sales@desertrich.com`.
