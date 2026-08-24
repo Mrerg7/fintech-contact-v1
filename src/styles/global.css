@@ -23,6 +23,7 @@
 
   body {
     font-family: var(--font-sans);
+    font-size: 16px;
     color: var(--color-ink);
     background-color: var(--color-paper);
     -webkit-font-smoothing: antialiased;
@@ -110,6 +111,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.65rem;
+    min-height: 44px;
     padding: 0.95rem 1.65rem;
     border-radius: 9999px;
     background: var(--color-accent);
@@ -133,6 +135,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    min-height: 44px;
     padding: 0.95rem 1.45rem;
     border-radius: 9999px;
     border: 1px solid rgba(255, 255, 255, 0.35);

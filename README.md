@@ -1,6 +1,6 @@
 # fintech.contact
 
-Static Astro site for **fintech.contact** — the definitive domain name for Financial Technologies. Deployed as Cloudflare Workers Static Assets plus a small Worker that 301-redirects `www` / HTTP to the canonical apex HTTPS host.
+Static Astro site for **fintech.contact** — the definitive domain name for Financial Technologies. Deployed as Cloudflare Workers Static Assets plus a small Worker that 301-redirects every non-canonical URL (`www`, HTTP, `/index.html`) to `https://fintech.contact/` in a single hop.
 
 ## Stack
 
