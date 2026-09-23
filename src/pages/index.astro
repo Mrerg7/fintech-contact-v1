@@ -5,7 +5,9 @@ import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
 import WhySection from '../components/WhySection.astro';
 import UseCasesSection from '../components/UseCasesSection.astro';
+import ProcessSection from '../components/ProcessSection.astro';
 import SeoValueSection from '../components/SeoValueSection.astro';
+import FaqSection from '../components/FaqSection.astro';
 import Footer from '../components/Footer.astro';
 import { SITE } from '../config/site';
 
@@ -16,7 +18,12 @@ if (!site) {
 const data = site.data;
 ---
 
-<BaseLayout title={SITE.title} description={SITE.description}>
+<BaseLayout
+  title={SITE.title}
+  description={SITE.description}
+  faqs={data.faqs}
+  processSteps={data.processSteps}
+>
   <Nav />
   <main>
     <Hero
@@ -26,7 +33,9 @@ const data = site.data;
     />
     <WhySection items={data.valueProps} />
     <UseCasesSection items={data.useCases} />
+    <ProcessSection steps={data.processSteps} />
     <SeoValueSection items={data.seoPoints} />
+    <FaqSection faqs={data.faqs} />
   </main>
   <Footer disclaimer={data.disclaimer} />
 </BaseLayout>

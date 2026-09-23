@@ -2,15 +2,15 @@ export const SITE = {
   name: 'fintech.contact',
   host: 'fintech.contact',
   url: 'https://fintech.contact',
-  title:
-    'fintech.contact | The Definitive Domain for Financial Technologies',
+  title: 'fintech.contact | Premium Financial Technologies Domain for Sale',
   description:
-    'fintech.contact is the definitive premium domain for financial technologies — a category-defining .contact asset for fintech platforms, payments, neobanks, and B2B financial software. Available for acquisition.',
+    'fintech.contact for sale — the exact-match premium domain for financial technologies. Ideal for fintech platforms, payments, neobanks & B2B finance. $10,000 USD via escrow.',
   email: 'sales@desertrich.com',
   askingPrice: 10000,
   askingPriceLabel: '$10,000',
   locale: 'en_US',
   publishedDate: '2026-08-01',
+  modifiedDate: '2026-09-23',
   googleSiteVerification: 'SvXvkz88HmD57NSp8Opd6rZU_tqnjuIWrWJEf16yw0E',
 } as const;
 

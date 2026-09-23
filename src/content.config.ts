@@ -6,7 +6,7 @@ const site = defineCollection({
   loader: file('./src/content/site/default.json'),
   schema: z.object({
     domain: z.string(),
-    email: z.string().email(),
+    email: z.email(),
     tagline: z.string(),
     heroSupport: z.string(),
     trustPoints: z.array(z.string()),
@@ -26,6 +26,18 @@ const site = defineCollection({
       z.object({
         title: z.string(),
         body: z.string(),
+      }),
+    ),
+    processSteps: z.array(
+      z.object({
+        title: z.string(),
+        body: z.string(),
+      }),
+    ),
+    faqs: z.array(
+      z.object({
+        question: z.string(),
+        answer: z.string(),
       }),
     ),
     disclaimer: z.string(),

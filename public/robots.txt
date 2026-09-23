@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://fintech.contact/sitemap.xml
+Sitemap: https://fintech.contact/sitemap-index.xml

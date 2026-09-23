@@ -1,0 +1,56 @@
+---
+interface Props {
+  steps: { title: string; body: string }[];
+}
+
+const { steps } = Astro.props;
+---
+
+<section
+  id="process"
+  class="relative z-10 scroll-mt-20 border-y border-[var(--color-line)] bg-white/40 px-5 py-20 sm:px-6 sm:py-24"
+>
+  <div class="mx-auto max-w-6xl">
+    <div class="max-w-2xl">
+      <p class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)]">
+        How acquisition works
+      </p>
+      <h2 class="section-title text-[var(--color-ink)]">
+        Three steps. Escrow-protected.
+      </h2>
+      <p class="mt-4 font-serif text-lg leading-relaxed text-[var(--color-ink-soft)]/80">
+        Buying a premium domain should feel as safe as any other five-figure purchase — inquiry, escrow,
+        transfer. Nothing moves until both sides are covered.
+      </p>
+    </div>
+
+    <ol class="mt-12 grid gap-8 sm:grid-cols-3">
+      {steps.map((step, index) => (
+        <li class="relative border-t border-[var(--color-line)] pt-6">
+          <p class="mb-3 font-mono text-xs tracking-widest text-[var(--color-mist)]">
+            {String(index + 1).padStart(2, '0')}
+          </p>
+          <h3 class="font-display text-xl tracking-tight text-[var(--color-ink)]">
+            {step.title}
+          </h3>
+          <p class="mt-3 text-[0.98rem] leading-relaxed text-[var(--color-ink-soft)]/75">
+            {step.body}
+          </p>
+        </li>
+      ))}
+    </ol>
+
+    <p class="mt-10 max-w-3xl text-sm leading-relaxed text-[var(--color-ink-soft)]/65">
+      Escrow handled through licensed providers such as
+      <a
+        href="https://www.escrow.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="font-medium text-[var(--color-accent)] underline underline-offset-4"
+      >
+        Escrow.com
+      </a>
+      — funds release only after the domain is confirmed in your registrar account.
+    </p>
+  </div>
+</section>

@@ -14,7 +14,7 @@ import { ACQUISITION_MAILTO, SITE } from '../config/site';
       <span class="font-display text-lg tracking-tight sm:text-xl">{SITE.name}</span>
     </a>
 
-    <div class="flex items-center gap-3">
+    <div class="flex items-center gap-3 sm:gap-5">
       <a
         href="#why"
         class="hidden text-sm font-medium text-white/75 transition-colors hover:text-white sm:inline"
@@ -22,10 +22,22 @@ import { ACQUISITION_MAILTO, SITE } from '../config/site';
         Why this domain
       </a>
       <a
+        href="#process"
+        class="hidden text-sm font-medium text-white/75 transition-colors hover:text-white sm:inline"
+      >
+        How it works
+      </a>
+      <a
+        href="#faq"
+        class="hidden text-sm font-medium text-white/75 transition-colors hover:text-white sm:inline"
+      >
+        FAQ
+      </a>
+      <a
         href={ACQUISITION_MAILTO}
         class="btn-primary !px-4 !py-2.5 text-sm sm:!px-5"
       >
-        Acquire
+        Acquire {SITE.askingPriceLabel}
       </a>
     </div>
   </nav>

@@ -9,7 +9,7 @@ Static Astro site for **fintech.contact** — the definitive domain name for Fin
 - Tailwind CSS v4 (`@tailwindcss/vite`)
 - Content Collections
 - `@astrojs/sitemap`
-- Cloudflare Workers Static Assets + Images CDN
+- Cloudflare Workers Static Assets
 
 ## Commands
 
