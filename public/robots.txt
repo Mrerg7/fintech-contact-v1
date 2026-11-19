@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
+# Only the apex homepage is indexable; aliases 301 here.
 Sitemap: https://fintech.contact/sitemap.xml
-Sitemap: https://fintech.contact/sitemap-index.xml

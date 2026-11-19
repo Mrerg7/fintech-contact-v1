@@ -10,7 +10,7 @@ export const SITE = {
   askingPriceLabel: '$10,000',
   locale: 'en_US',
   publishedDate: '2026-08-01',
-  modifiedDate: '2026-09-23',
+  modifiedDate: '2026-11-19',
   googleSiteVerification: 'SvXvkz88HmD57NSp8Opd6rZU_tqnjuIWrWJEf16yw0E',
 } as const;
 
